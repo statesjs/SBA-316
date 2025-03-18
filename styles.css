@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgb(25, 25, 85);
+  background: linear-gradient(
+    301deg,
+    rgba(25, 25, 85, 1) 24%,
+    rgba(63, 54, 91, 1) 40%,
+    rgba(47, 20, 98, 1) 49%,
+    rgba(10, 17, 51, 1) 68%,
+    rgba(49, 35, 119, 1) 90%,
+    rgba(25, 37, 96, 1) 95%
+  );
+  display: flex;
+
+  /*https://cssgradient.io/*/
+}
+
+#butler {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.todo-main {
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.header h2 {
+  color: green;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 3%;
+}
+
+#butler {
+  width: 30px;
+  margin-left: 10px;
+}
