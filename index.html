@@ -13,18 +13,27 @@
     <div class="container">
       <div class="todo-main">
         <div class="header">
-          <!--header that has the date and possibly has date functionality-->
-          <h2>To-Do List <img src="imgs/butler.png" id="butler" /></h2>
+          <h2>To-Do List</h2>
+          <img src="imgs/butler.png" id="butler" alt="Butler Icon" />
         </div>
-        <div class="add-box">
-          <!--input that can add a new task-->
-          <input type="text" id="input-box" placeholder="add new task" />
-        </div>
+        <form id="task-form">
+          <div class="add-box">
+            <input
+              type="text"
+              id="input-box"
+              placeholder="Add new task"
+              minlength="1"
+              maxlength="30"
+            />
+            <input type="image" src="imgs/plus.png" id="plus" />
+          </div>
+        </form>
+        <hr />
         <div class="task-box">
-          <!--container for all the new tasks-->
+          <ul id="list-container"></ul>
         </div>
       </div>
     </div>
-    <script src="script.js" async defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

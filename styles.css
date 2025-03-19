@@ -1,12 +1,18 @@
-body {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+}
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: rgb(25, 25, 85);
   background: linear-gradient(
     301deg,
@@ -31,21 +37,114 @@ body {
 .todo-main {
   width: 100%;
   max-width: 540px;
-  background: white;
+  background: rgb(40, 36, 36);
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
 }
 
-.header h2 {
+.header {
   color: green;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   padding: 3%;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #butler {
+  width: 40px;
+  transition: 0.5s;
+}
+#butler:hover {
+  transform: scale(1.5);
+}
+/* add task */
+
+.add-box {
+  background-color: rgb(152, 136, 167);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 2%;
+  min-height: fit-content;
+}
+
+#input-box {
+  flex: 1;
+  min-width: 70%;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#plus {
   width: 30px;
-  margin-left: 10px;
+
+  transition: 0.2s;
+}
+
+#plus:hover {
+  transform: scale(1.2);
+}
+
+/* Task list container */
+#list-container {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Task items */
+#list-container li {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Task status icon */
+.status-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+/* Delete button (image) */
+.delete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete:hover {
+  transform: scale(1.2);
+}
+
+/* Scrollbar Customization */
+.task-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.task-box::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
